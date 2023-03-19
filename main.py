@@ -66,7 +66,11 @@ def isDry(soilSensor):
         sensor = sensor2
     print('sensor' + str(soilSensor[0]) + ' = ' + str(sensor.read_u16()))
     # read moisture value and convert to percentage into the calibration range
-    moisture = (maxMoisture - sensor.read_u16())*100 /(maxMoisture - minMoisture) 
+    moisture = (maxMoisture - sensor.read_u16())*100 /(maxMoisture - minMoisture)
+    if moisture > 100:
+        moisture = 100
+    elif moisture < 0:
+        moisture = 0
     # print values
     print('moisture: ' + '%.2f' % moisture + '% (adc: ' + str(sensor.read_u16()) + ')')
     return 0 if moisture > 30 else 1
