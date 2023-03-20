@@ -2,8 +2,8 @@ from machine import Pin, ADC, Timer, RTC
 import time, os
 
 # constants
-PIN_PUMP_1 = 15
-PIN_PUMP_2 = 14
+PIN_PUMP_1 = 14
+PIN_PUMP_2 = 15
 PIN_LED_L_1 = 2
 PIN_LED_L_2 = 3
 PIN_LED_L_3 = 4
@@ -50,8 +50,8 @@ button2 = Pin(PIN_BUTTON_2, Pin.IN, Pin.PULL_DOWN)
 wl1 = Pin(PIN_WATER_LEVEL_SENSOR_1, Pin.IN, Pin.PULL_UP)
 wl2 = Pin(PIN_WATER_LEVEL_SENSOR_2, Pin.IN, Pin.PULL_UP)
 
-sensor1 = ADC(Pin(26))
-sensor2 = ADC(Pin(27))
+sensor1 = ADC(Pin(27))
+sensor2 = ADC(Pin(26))
 
 # use variables instead of numbers:
 soil1 = (1, 6000, 60000, )# Soil moisture PIN reference, calibraton value min, calibraton value min max
