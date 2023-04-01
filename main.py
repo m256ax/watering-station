@@ -2,8 +2,8 @@ from machine import Pin, ADC, Timer, RTC
 import time, os
 
 # constants
-PIN_PUMP_1 = 14
-PIN_PUMP_2 = 15
+PIN_PUMP_1 = 15
+PIN_PUMP_2 = 14
 PIN_LED_L_1 = 2
 PIN_LED_L_2 = 3
 PIN_LED_L_3 = 4
